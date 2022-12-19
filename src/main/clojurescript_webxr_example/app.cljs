@@ -20,7 +20,8 @@
 
 (defn init []
       (.add scene cube)
-      (set! (.. camera -position -z) 5)
+      ;(set! (.. camera -position -z) 5)
+      (set! (.. cube -position -z) -5)
       (.appendChild (.-body js/document) (.createButton VRButton renderer))
       (set! (.. renderer -xr -enabled) true)
       (.setAnimationLoop renderer animate))
